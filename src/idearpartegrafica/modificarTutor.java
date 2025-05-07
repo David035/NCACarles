@@ -23,13 +23,13 @@ public class modificarTutor extends javax.swing.JFrame {
      */
     public modificarTutor() {
         initComponents();
-        lstAssignatures4.setModel(modelListaAssignatures4);
+        lstAlumnes.setModel(modelListaAssignatures4);
         cargarModulsEnLista();
     }
     
     private void lstAssignatures4ValueChanged(javax.swing.event.ListSelectionEvent evt) {
         if (!evt.getValueIsAdjusting()) {
-            modulosSeleccionadosTemporal4 = lstAssignatures4.getSelectedValuesList();
+            modulosSeleccionadosTemporal4 = lstAlumnes.getSelectedValuesList();
         }
     }
     
@@ -61,12 +61,12 @@ public class modificarTutor extends javax.swing.JFrame {
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
-        txtIDProf4 = new javax.swing.JTextField();
-        txtNomCog4 = new javax.swing.JTextField();
-        txtTelefon4 = new javax.swing.JTextField();
-        txtCorreu4 = new javax.swing.JTextField();
+        txtIDTutor = new javax.swing.JTextField();
+        txtNomCog = new javax.swing.JTextField();
+        txtTelefon = new javax.swing.JTextField();
+        txtCorreu = new javax.swing.JTextField();
         jScrollPane5 = new javax.swing.JScrollPane();
-        lstAssignatures4 = new javax.swing.JList<>();
+        lstAlumnes = new javax.swing.JList<>();
         jLabel26 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -95,12 +95,12 @@ public class modificarTutor extends javax.swing.JFrame {
 
         jLabel25.setText("Alumne associat:");
 
-        lstAssignatures4.setModel(new javax.swing.AbstractListModel<String>() {
+        lstAlumnes.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { " " };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane5.setViewportView(lstAssignatures4);
+        jScrollPane5.setViewportView(lstAlumnes);
 
         jLabel26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel26.setText("Després de posar l'ID, ompliu els camps que voleu modificar");
@@ -126,11 +126,11 @@ public class modificarTutor extends javax.swing.JFrame {
                         .addGap(101, 101, 101))
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtTelefon4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtIDProf4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtTelefon, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtIDTutor, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(txtCorreu4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
-                                .addComponent(txtNomCog4, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addComponent(txtCorreu, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
+                                .addComponent(txtNomCog, javax.swing.GroupLayout.Alignment.LEADING))
                             .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(61, Short.MAX_VALUE))))
             .addGroup(jPanel7Layout.createSequentialGroup()
@@ -145,20 +145,20 @@ public class modificarTutor extends javax.swing.JFrame {
                 .addComponent(jLabel26)
                 .addGap(43, 43, 43)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtIDProf4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtIDTutor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel21))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel22)
-                    .addComponent(txtNomCog4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNomCog, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel23)
-                    .addComponent(txtTelefon4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtTelefon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel24)
-                    .addComponent(txtCorreu4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtCorreu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel25)
@@ -213,11 +213,11 @@ public class modificarTutor extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnguardar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardar4ActionPerformed
-        String id = txtIDProf4.getText().trim();
-        String nomCog = txtNomCog4.getText().trim();
-        String telefon = txtTelefon4.getText().trim();
-        String correu = txtCorreu4.getText().trim();
-        List<String> assignatures = lstAssignatures4.getSelectedValuesList();
+        String id = txtIDTutor.getText().trim();
+        String nomCog = txtNomCog.getText().trim();
+        String telefon = txtTelefon.getText().trim();
+        String correu = txtCorreu.getText().trim();
+        List<String> assignatures = lstAlumnes.getSelectedValuesList();
 
         ProfesorValidador validador = new ProfesorValidador();
 
@@ -287,10 +287,10 @@ public class modificarTutor extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JList<String> lstAssignatures4;
-    private javax.swing.JTextField txtCorreu4;
-    private javax.swing.JTextField txtIDProf4;
-    private javax.swing.JTextField txtNomCog4;
-    private javax.swing.JTextField txtTelefon4;
+    private javax.swing.JList<String> lstAlumnes;
+    private javax.swing.JTextField txtCorreu;
+    private javax.swing.JTextField txtIDTutor;
+    private javax.swing.JTextField txtNomCog;
+    private javax.swing.JTextField txtTelefon;
     // End of variables declaration//GEN-END:variables
 }
