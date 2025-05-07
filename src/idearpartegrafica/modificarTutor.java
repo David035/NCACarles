@@ -85,15 +85,15 @@ public class modificarTutor extends javax.swing.JFrame {
 
         btnborrar4.setText("Borrar");
 
-        jLabel21.setText("ID de Professor a modificar:");
+        jLabel21.setText("ID Tutor:");
 
         jLabel22.setText("Nom i cognoms:");
 
         jLabel23.setText("Telèfon:");
 
-        jLabel24.setText("Correu electrònic.:");
+        jLabel24.setText("Relació amb l'alumne:");
 
-        jLabel25.setText("Assignatures que imparteix:");
+        jLabel25.setText("Alumne associat:");
 
         lstAssignatures4.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { " " };
@@ -188,7 +188,7 @@ public class modificarTutor extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
