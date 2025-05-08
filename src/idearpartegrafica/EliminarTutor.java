@@ -126,8 +126,8 @@ public class EliminarTutor extends javax.swing.JFrame {
             return;
         }
 
-        ProfesorDAO profesorDAO = new ProfesorDAO();
-        boolean eliminado = profesorDAO.eliminarProfesor(idAEliminar);
+        TutorDAO tutorDAO = new TutorDAO();
+        boolean eliminado = tutorDAO.eliminarTutor(idAEliminar);
 
         if (eliminado) {
             JOptionPane.showMessageDialog(this, "Tutor con ID " + idAEliminar + " eliminado correctamente.");
