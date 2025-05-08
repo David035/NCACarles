@@ -187,8 +187,9 @@ public class tutor extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        LlistarProfessors nuevaVentana4 = new LlistarProfessors();
+        LlistarTutors nuevaVentana4 = new LlistarTutors();
         nuevaVentana4.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
