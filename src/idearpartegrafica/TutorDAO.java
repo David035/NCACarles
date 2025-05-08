@@ -42,6 +42,17 @@ public class TutorDAO {
             return false;
         }
     }
-
-    // Podries tenir altres mètodes per obtenir, actualitzar, eliminar tutors, etc.
+    public boolean eliminarTutor (String idTutor){
+        String sql = "DELETE FROM tutors WHERE id = ?";
+        try (Connection conn = dbConnection.getConexion();
+                PreparedStatement pstmt = conn.prepareStatement(sql)){
+            pstmt.setString(1, idTutor);
+            int filasAfectadas = pstmt.executeUpdate();
+            return filasAfectadas > 0;
+        }catch (SQLException e){
+            System.err.println("Error al eliminar el tutor: " + e.getMessage());
+            return false;
+        }
+    }
+    
 }
